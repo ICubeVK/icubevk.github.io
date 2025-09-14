@@ -1,0 +1,102 @@
+/* -------------------------------------------------------------
+   1. Reset & base typography
+   ------------------------------------------------------------- */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  background:#1a191f;
+  color: #e0f2ff;
+}
+
+/* -------------------------------------------------------------
+   2. Button group container
+   ------------------------------------------------------------- */
+.button-group {
+  display:flex;
+  gap: 1rem;          /* space between buttons */
+  padding: 2rem;
+  justify-content:center;
+  align-items:center;
+}
+
+/* -------------------------------------------------------------
+   3. Base button style
+   ------------------------------------------------------------- */
+.button {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: .75rem 1.5rem;   /* vertical | horizontal */
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px;    /* pill shape */
+  transition:all .25s ease;
+  cursor:pointer;
+  /* Default light‑mode colors – override in modifiers */
+  background:#e0e2e5;
+  color:#e0f2ff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  /* Remove the hypertext's underline */
+  text-decoration: none;
+}
+
+/* Hover / active / focus */
+.button:hover {
+  transform:translateY(-5px);
+  box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+.button:active {
+  transform:translateY(0);
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+.button:focus-visible {
+  outline:2px solid #5c9eff;
+  outline-offset:2px;
+}
+
+/* -------------------------------------------------------------
+   4. Custom button modifier
+   ------------------------------------------------------------- */
+
+.button-1 {
+  background:#4caf50;
+  color:#fff;
+  font-weight:700;
+  background: linear-gradient(135deg, #8acb93, #0d8f16);
+}
+
+.button-2{
+    background: #3bffe8;
+    color:#fff;
+    font-weight:700;
+    background: linear-gradient(135deg, #65e80f, #0d8f16);
+}
+
+/* 2. NEW – responsive break for narrow viewports ------------------------ */
+@media (max-width: 500px) {
+    .button-group {
+        flex-direction: column;        /* stack the buttons vertically */
+        align-items: center;           /* keep them centered horizontally */
+    }
+
+    .button {
+        display: block;
+        margin-bottom: .75rem;         /* space between stacked buttons */
+    }
+
+    /* remove the gap that was used in row layout */
+    .button-group > .button:last-child {
+        margin-bottom: 0;              /* no extra space after the last button */
+    }
+}
+
+/*3. Custom Classes*/
+
+.centered { text-align:center; }
+
+h1 {
+    font-family: "Manrope", sans-serif;
+    font-size: 36px;
+}
