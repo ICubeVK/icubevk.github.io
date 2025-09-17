@@ -35,8 +35,6 @@ html, body {
   transition:all .25s ease;
   cursor:pointer;
   /* Default light‑mode colors – override in modifiers */
-  background:#e0e2e5;
-  color:#e0f2ff;
   box-shadow: 0 2px 8px rgba(0,0,0,.15);
   /* Remove the hypertext's underline */
   text-decoration: none;
@@ -64,14 +62,35 @@ html, body {
   background:#4caf50;
   color:#fff;
   font-weight:700;
-  background: linear-gradient(135deg, #8acb93, #0d8f16);
+  background: linear-gradient(135deg, #4dad5a, #00c40e);
 }
 
 .button-2{
     background: #3bffe8;
     color:#fff;
     font-weight:700;
-    background: linear-gradient(135deg, #65e80f, #0d8f16);
+    background: linear-gradient(135deg, #b2e312, #036e0b);
+}
+
+/* -------------------------------------------------------------
+   5. Custom botton background
+   ------------------------------------------------------------- */
+
+.important {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding: .5rem 1rem;   /* vertical | horizontal */
+    font-size: 1rem;
+    border-radius: 20px;    /* pill shape */
+    transition:all .25s ease;
+    cursor:pointer;
+    /* Graphical edits */
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    background: #3bffe8;
+    color:#fff;
+    font-weight:700;
+    background: linear-gradient(135deg, rgba(255, 0, 14, 0.51), rgba(169, 43, 19, 0.36));
 }
 
 /* 2. NEW – responsive break for narrow viewports ------------------------ */
